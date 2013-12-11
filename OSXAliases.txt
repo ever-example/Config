@@ -20,3 +20,8 @@ alias myflglcv=myflglcv1
 myRasa1() {
 g++ $1 `fltk-config --ldflags --cxxflags` `pkg-config --libs opencv` `pkg-config --cflags opencv`
 }
+
+myls1() {
+livestreamer www.twitch.tv/$1 best 
+}
+alias twitch=myls1
