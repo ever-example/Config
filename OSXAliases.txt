@@ -25,3 +25,8 @@ myls1() {
 livestreamer www.twitch.tv/$1 best 
 }
 alias twitch=myls1
+
+mydecodeurl1() {
+python -c "import urllib, sys;print; print urllib.unquote(sys.argv[1])" $1
+}
+alias deurl=mydecodeurl1
