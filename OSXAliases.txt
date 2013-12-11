@@ -1,0 +1,22 @@
+
+myflgl1(){
+g++ $1 `fltk-config --ldflags --cxxflags` -lfltk_gl -framework AGL -framework OpenGL
+}
+#alias myflgl=myflgl1
+
+mygcv1(){
+g++ $1 -lopencv_core -lopencv_highgui -lopencv_imgproc -I/usr/local/include/
+}
+mygcv2(){
+g++ $1 `pkg-config --libs opencv` `pkg-config --cflags opencv`
+}
+alias gcv=mygcv2
+
+myflglcv1() {
+g++ $1 `fltk-config --ldflags --cxxflags` -lfltk_gl -framework AGL -framework OpenGL `pkg-config --libs opencv` `pkg-config --cflags opencv`
+}
+alias myflglcv=myflglcv1
+
+myRasa1() {
+g++ $1 `fltk-config --ldflags --cxxflags` `pkg-config --libs opencv` `pkg-config --cflags opencv`
+}
